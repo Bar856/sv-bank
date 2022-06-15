@@ -6,8 +6,8 @@ export default function Admin(props) {
     <div className='container'>
         <h1>Manager</h1>
         {
-            props.customers.map(cust=>{
-                return <AdminCustList deleteUser={props.deleteUser} deleteExpense={props.deleteExpense} customer={cust}/>
+            props.customers.map((cust,i)=>{
+                return <AdminCustList key={i} deleteUser={props.deleteUser} deleteExpense={props.deleteExpense} customer={cust}/>
             })
         }
         <Link to={'/sv-bank'}><button className='margeTen'>Back To Home</button></Link>
