@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/sv-bank/static/css/main.256797d3.css",
-    "main.js": "/sv-bank/static/js/main.96988b59.js",
+    "main.css": "/sv-bank/static/css/main.32d8e553.css",
+    "main.js": "/sv-bank/static/js/main.4141ddaa.js",
     "static/media/bg.jpg": "/sv-bank/static/media/bg.dfa48a5fd294a730793f.jpg",
     "index.html": "/sv-bank/index.html",
-    "main.256797d3.css.map": "/sv-bank/static/css/main.256797d3.css.map",
-    "main.96988b59.js.map": "/sv-bank/static/js/main.96988b59.js.map"
+    "main.32d8e553.css.map": "/sv-bank/static/css/main.32d8e553.css.map",
+    "main.4141ddaa.js.map": "/sv-bank/static/js/main.4141ddaa.js.map"
   },
   "entrypoints": [
-    "static/css/main.256797d3.css",
-    "static/js/main.96988b59.js"
+    "static/css/main.32d8e553.css",
+    "static/js/main.4141ddaa.js"
   ]
 }
