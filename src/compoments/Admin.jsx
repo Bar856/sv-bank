@@ -10,7 +10,7 @@ export default function Admin(props) {
                 return <AdminCustList deleteUser={props.deleteUser} deleteExpense={props.deleteExpense} customer={cust}/>
             })
         }
-        <Link to={'/sv-bank'}><button>Back To Home</button></Link>
+        <Link to={'/sv-bank'}><button className='margeTen'>Back To Home</button></Link>
     </div>
   )
 }

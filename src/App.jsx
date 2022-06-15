@@ -39,8 +39,8 @@ function App() {
   const [customerLogIn, setCustomerLogIn] = useState('');
   
   const checkLogin= (username,password) =>{
-    let tmpuser = customers.filter(cust => cust.fullName == username && cust.password == password )[0]
-    if (typeof tmpuser == 'undefined'){
+    let tmpuser = customers.filter(cust => cust.fullName === username && cust.password === password )[0]
+    if (typeof tmpuser === 'undefined'){
       return false
     }
     else{
@@ -70,7 +70,8 @@ function App() {
       setCustomerLogIn(tmpCust)
     }else{
       let newCust = new CustomerClass(id,fullName,password,balance);
-      setCustomers([...customers,newCust])
+      tmpUsers.push(newCust);
+      setCustomers(tmpUsers);
     }
     
   }
@@ -87,7 +88,7 @@ function App() {
   const deleteExpense = (expenseId,custId) =>{
     let tmpCusts = [...customers];
     tmpCusts.forEach(cust=>{
-      if (cust.id == custId){
+      if (cust.id === custId){
         cust.expenses.splice(expenseId,1)
       }
     })
@@ -96,7 +97,7 @@ function App() {
   const deleteUser = (userId) =>{
     let tmpCusts = [...customers];
     tmpCusts.forEach((cust,i)=>{
-      if (cust.id == userId){
+      if (cust.id === userId){
         tmpCusts.splice(i,1)
       }
     })

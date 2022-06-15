@@ -1,10 +1,19 @@
 .App {
   text-align: center;
 }
+input[type="text"],input[type="password"],input[type="number"]{
+  text-align: center;
+}
 h1{
   font-size: 40px;
   font-weight: bold;
   color: rgb(0, 0, 0);
+}
+.margeTen{
+  margin: 10px;
+}
+.heightBtns{
+  height: 100px
 }
 body{
   background-image: url("./imgs/bg.jpg");
@@ -25,10 +34,12 @@ body{
   margin-top: 10px;
 }
 button{
-  color: darkblue;
+  color: rgb(0, 0, 0);
   border-radius: 40px;
   /* margin: 10px; */
   font-weight: bold;
+  background-color: white;
+  width: 150px;
 }
 .borderSimple{
   border: 1px solid rgb(31, 31, 31);

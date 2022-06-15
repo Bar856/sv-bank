@@ -26,7 +26,7 @@ export default function RegisterPage(props) {
         }
     }
     const checkId = () =>{
-        if (id.length == 9){
+        if (id.length === 9){
             // true - contains number 
             if (/[^a-zA-Z]/.test(id)){
                 document.getElementById("idAlert").innerHTML = ""
@@ -41,7 +41,7 @@ export default function RegisterPage(props) {
         }
     }
     const checkPasswords = () =>{
-        if (password.length>6){
+        if (password.length>=6){
             if (password === confirmPassword){
                 document.getElementById("passwordConfirmAlert").innerHTML = "";
                 document.getElementById("passwordAlert").innerHTML = "";
@@ -51,7 +51,7 @@ export default function RegisterPage(props) {
                 return false;
             }
         }else{
-            document.getElementById("passwordAlert").innerHTML = "Passwords Must Be At Least 6-digits Match";
+            document.getElementById("passwordAlert").innerHTML = "Passwords Must Be At Least 6-digits";
             return false;
         }
     }
@@ -74,41 +74,41 @@ export default function RegisterPage(props) {
   return (
     <div className='container'>
         <div className='row'>
-            <input onChange={(e)=>setId(e.target.value)} minLength={9} maxLength={9} placeholder='ID' type="text"/>
+            <input style={{'marginBottom':'10px'}} onChange={(e)=>setId(e.target.value)} minLength={9} maxLength={9} placeholder='ID' type="text"/>
         </div>
         <div className='row'>
             <label className='alerts' id="idAlert"></label>
         </div>
         <div className='row'>
-            <input onChange={(e)=>setFullName(e.target.value)} placeholder='Full name' type="text"  />
+            <input style={{'marginBottom':'10px'}} onChange={(e)=>setFullName(e.target.value)} placeholder='Full name' type="text"  />
         </div>
         <div className='row'>
             <label className='alerts' id="fullNameAlert"></label>
         </div>
         <div className='row'>
-            <input onChange={(e)=>setPassword(e.target.value)} placeholder='Password' type="password"  />
+            <input style={{'marginBottom':'10px'}} onChange={(e)=>setPassword(e.target.value)} placeholder='Password' type="password"  />
         </div>
         <div className='row'>
             <label className='alerts' id="passwordAlert"></label>
         </div>
         <div className='row'>
-            <input onChange={(e)=>setConfirmPassword(e.target.value)} placeholder='Confirm Password' type="password"  />
+            <input style={{'marginBottom':'10px'}} onChange={(e)=>setConfirmPassword(e.target.value)} placeholder='Confirm Password' type="password"  />
         </div>
         <div className='row'>
             <label className='alerts' id="passwordConfirmAlert"></label>
         </div>
         <div className='row'>
-            <input onChange={(e)=>setMoney(e.target.value)} placeholder='Money' type="number" name="money" id="money" />
+            <input style={{'marginBottom':'10px'}} onChange={(e)=>setMoney(e.target.value)} placeholder='Money' type="number" name="money" id="money" />
         </div>
         <div className='row'>
             <label className='alerts' id="moneyAlert"></label>
         </div>
         <div className='row'>
-            <div><button onClick={addCustFnBtn}>{useLocation().pathname == '/sv-bank/register' ? 'Register' : 'Edit'}</button></div>
+            <div><button className='margeTen' onClick={addCustFnBtn}>{useLocation().pathname === '/sv-bank/register' ? 'Register' : 'Edit'}</button></div>
         </div>
         <div className='row'>
-            <Link to={useLocation().pathname == '/sv-bank/register' ? '/sv-bank' : props.getCustLink()}>
-            <button>{useLocation().pathname == '/sv-bank/register' ? 'Home' : 'Back'}</button>
+            <Link to={useLocation().pathname === '/sv-bank/register' ? '/sv-bank' : props.getCustLink()}>
+            <button className='margeTen'>{useLocation().pathname === '/sv-bank/register' ? 'Home' : 'Back'}</button>
             </Link>
         </div>
         {navToHome && <Navigate replace to='/sv-bank'/>}
